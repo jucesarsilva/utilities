@@ -1,33 +1,19 @@
-# Shuffler
-This code tests algorithms to shuffle an array
+# Utilities
+This package provides several tools and utils resources javascrit
 
-## Config
-> If you run with proxy name host, add into hosts `mac e linux: /etc/hosts`, `windows: System32/drivers/etc`
-
+1. calculate storage from broswer device
 ```
-127.0.0.1  shuffler.com
+import { calculateStorage } from '@jucesarsilva/utilities'
 
-```
-
-## Install
-> Just at first time or when add a new dependency
-```
-yarn
+const calculate = async () => {
+  const { usage, quota } = await calculateStorage()
+}
 ```
 
-## Run with proxy
-> run host name proxy
+2. convert bytes into (bytes, KB, MB, GB or TB)
 ```
-yarn start:host
-```
+import { convertBytes } from '@jucesarsilva/utilities'
 
-## Run without proxy
-> run without host name proxy
+const space = convertBytes(2043212)
+/* space = "1.95 MB" */ 
 ```
-yarn start
-```
-
-## Sample
-[Demo](https://jucesarsilva.github.io/shuffler-algorithms/)
-
-<img src="assets/sample.jpg" />
