@@ -1,0 +1,42 @@
+{
+  "name": "utilities",
+  "private": true,
+  "version": "0.1.0",
+  "author": {
+    "name": "Julio Cesar Silva",
+    "email": "julio_c.silva@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jucesarsilva/utilities.git"
+  },
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "http-server": "^14.0.0"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "http-server ./ ./node_modules/http-server/lib/http-server.js -c-1 -p 80",
+    "start:host": "http-server ./ ./node_modules/http-server/lib/http-server.js -c-1 -p 80 --proxy http://utilities.com"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
+  }
+}
